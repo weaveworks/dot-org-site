@@ -34,6 +34,7 @@ jobs:
             # this is to fix GIT not liking owner of the checkout dir
             chown -R $(id -u):$(id -g) $PWD
             git config --global --add safe.directory /__w/{repo_name}/{repo_name}
+            git config --global --add safe.directory /github/workspace
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: build_and_deploy
